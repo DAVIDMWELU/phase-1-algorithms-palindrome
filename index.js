@@ -1,13 +1,20 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // Normalize the string by converting to lowercase
+  const normalizedWord = word.toLowerCase();
+  
+  // Reverse the string
+  const reversedWord = normalizedWord.split('').reverse().join('');
+  
+  // Check if the word is the same forwards and backwards
+  return normalizedWord === reversedWord;
 }
 
 /* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
+  Pseudocode explanation:
+  1. Normalize the input by converting the string to lowercase.
+  2. Reverse the string.
+  3. Compare the original string with the reversed string.
+  4. Return true if they are the same, otherwise return false.
 */
 
 // You can run `node index.js` to view these console logs
